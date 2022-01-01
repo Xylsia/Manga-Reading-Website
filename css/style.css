@@ -1,0 +1,899 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+body{
+    font-family:Lucida Sans Unicode;
+    width: 100%;
+    background-image: url('../img/background.jpg');
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* header */
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+.headerTop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #8053ac;
+}
+
+.search{
+    margin: 1em;
+    margin-left: 5em;
+}
+
+.searchText{
+    padding: 0.5em;
+    font-size: 1em;
+    border: 0.1em solid #591b98;
+    background: #ffe6ff;
+}
+  
+.searchButton{
+    padding: 0.5em;
+    background: #ffe6ff;
+    color: #591b98;
+    font-size: 1rem;
+    border: 0.1em solid #591b98;
+    cursor: pointer;
+  }
+  
+.searchButton:hover{
+    background-color: #ffb3ff;
+    transition: 0.2s;
+}
+
+.fab{
+    color:#ffe6ff;
+    padding: 0.5rem;
+}
+
+.fab:hover{
+   color: #ffb3ff;
+   transform: scale(1.1);
+   transition: 0.3s;
+}
+
+.dropdown{
+    margin-top: 0.5em;
+    margin-left: 17em;
+}
+
+.dropButton{
+    background-color: #ffe6ff;
+    color:#591b98;
+    padding: 1em;
+    font-size: 1rem;
+    border: 0.1em solid #591b98;
+    cursor: pointer;
+}
+
+.dropNav{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 8.6em;
+}
+
+.dropNav a{
+    color: black;
+    padding: 1em;
+    text-decoration: none;
+}
+
+.dropNav a:hover:not(.active){
+    background-color: #ffe6ff;
+    color:#591b98;
+}
+
+.dropdown:hover .dropButton{
+    background-color: #ffb3ff;
+}
+
+.dropdown:hover .dropNav{
+    display: flex;
+    flex-direction: column;
+}
+
+.headerMid{
+    background-color: #996bc7;
+    padding: 0.5em;
+}
+
+.titleTop{
+    font-family: Impact, sans-serif;
+    font-size: 5rem;
+}
+
+.titleTop a{
+    text-decoration: none;
+    color: white;
+}
+
+.titleBot{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2.5rem;
+    font-style: italic;
+    color: #ffb3ff;  
+}
+
+.headerNav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #8053ac;
+}
+  
+.headerNav li{
+    float: left;
+}
+
+.headerNav li:nth-child(2){
+    display:none;
+}
+
+.headerNav li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0.7em 1em;
+    text-decoration: none;
+}
+  
+.headerNav li a:hover:not(.active){
+    background-color: #ffb3ff;
+    color: #591b98;
+    transition: 0.3s;
+}
+  
+.active{
+    background-color: #cd4ccd;
+}
+
+/* slideshow */
+.slideshow{
+    align-items: center;
+    width: 100%;
+    height: auto;
+    -webkit-animation: fade 2s infinite;
+    -moz-animation: fade 2s infinite;
+    -ms-animation: fade 2s infinite;
+    -o-animation: fade 2s infinite;
+    animation: fade 2s infinite;
+}
+
+@keyframes fade{
+    0% {opacity: 0.5;}
+    100% {opacity: 1;}
+}
+
+@-moz-keyframes fade{
+    0% {opacity: 0.5;}
+    100% {opacity: 1;}
+}
+
+@-webkit-keyframes fade{
+    0% {opacity: 0.5;}
+    100% {opacity: 1;}
+}
+
+@-ms-keyframes fade{
+    0% {opacity: 0.5;}
+    100% {opacity: 1;}
+}
+
+@-o-keyframes fade{
+    0% {opacity: 0.5;}
+    100% {opacity: 1;}
+}
+
+/* index.html */
+.highlight{
+    display: flex;
+    flex-direction: column;
+}
+
+.highlightTop{
+    background-color: rgb(138, 77, 179, 0.7);
+    margin: 0.5em 1em;
+    border-radius: 2em;
+}
+
+.highlightText{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2rem;
+    font-style: italic;
+    color: #ffb3ff;
+    margin-top: 0.2em;
+}
+
+.highlightButton{
+    border: 0.2em solid #ffb3ff;
+    padding: 0.5em 3em;
+    margin: 1em;
+    font-size: 1rem;
+    align-items: center;
+    background-color: rgb(138, 77, 179, 0.7);
+    color: #ffb3ff;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.highlightButton:hover{
+    transition: 0.4s;
+    color:#591b98;
+    background-color: #ffb3ff;
+}
+
+.highlightBot{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em 1em;
+    border-radius: 2em;
+    background-color: rgb(255, 230, 255, 0.7)
+}
+
+.manga{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    margin: 1em;
+}
+
+.mangaImg{
+    width: 100%;
+    height: auto;
+}
+
+.mangaImg:hover{
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+
+.mangaTitle{
+    width: 90%;
+    padding: 0.5em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    height: auto;
+    color: #591b98;
+}
+
+.manga a{
+    text-decoration: none;
+}
+
+/* terms, cookies, about, privacy */
+.middle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.middleImg{
+    width: 90%;
+    height: auto;
+    margin-top: 1em;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+}
+
+.text{
+    width: 90%;
+    height: auto;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    background-color: rgb(255, 230, 255, 0.7);
+    word-wrap: break-word;
+    color: #591b98;
+}
+
+/* manga* */
+.mangaImage{
+    width: 90%;
+    height: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: 2em;
+}
+
+.mangaText{
+    width: 90%;
+    height: auto;
+    background-color: rgb(255, 230, 255, 0.7);
+    word-wrap: break-word;
+    color: #591b98;
+    border-radius: 2em;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+.mangaForm{
+    width: 50%;
+    background-color: rgb(255, 230, 255, 0.7);
+    border-radius: 2em;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.mangaButton{
+    border: 0.2em solid #8053ac;
+    padding: 0.5em 3em;
+    margin: 1em;
+    font-size: 1rem;
+    align-items: center;
+    background-color: rgb(255, 230, 255, 0.7);
+    color:#8053ac;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.mangaButton:hover{
+    transition: 0.4s;
+    color:#ffb3ff;
+    background-color: #8053ac;
+}
+
+.suggest{
+    width: 70%;
+    height: auto;
+    background-color: rgb(255, 230, 255, 0.7);
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2rem;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    font-style: italic;
+    color:#591b98;
+}
+
+.mangaSuggest{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 1em;
+    border-radius: 2em;
+    background-color: rgb(255, 230, 255, 0.7);
+}
+
+.chapters{
+    width: 90%;
+    height: auto;
+    margin-bottom: 1em;
+    border-radius: 2em;
+    background-color: rgb(255, 230, 255, 0.7);
+}
+
+.chapters ul{
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.chapters ul li:nth-of-type(even){
+    background-color: rgb(255, 179, 255, 0.5);
+}
+
+.chapters ul li{
+    padding: 0.5em;
+}
+
+.chapters ul li a{
+    text-align: center;
+    padding: 0.5em 0.7em;
+    text-decoration: none;
+    color:#591b98;
+}
+
+/* contact, request */
+.question{
+    width: 90%;
+    height: auto;
+    background-color: rgb(255, 230, 255, 0.7);
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2rem;
+    font-style: italic;
+    color:#591b98;
+}
+
+.form{
+    background-color: rgb(255, 230, 255, 0.7);
+    width: 90%;
+    height: auto;
+    padding: 2em;
+    margin-bottom: 1em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+}
+
+.label{
+    font-style: italic;
+    color:#591b98;
+    font-size: 1.3rem;
+}
+
+#name{
+    border: 0.2em solid #591b98;
+    border-radius: 1em;
+    padding: 0.5em;
+    background-color: rgb(255, 230, 255, 0.7);
+}
+
+#email{
+    border: 0.2em solid #591b98;
+    border-radius: 1em;
+    padding: 0.5em;
+    background-color: rgb(255, 230, 255, 0.7);
+}
+
+#textArea{
+    border: 0.2em solid #591b98;
+    border-radius: 1em;
+    padding: 0.5em;
+    background-color: rgb(255, 230, 255, 0.7);
+    resize: none;
+}
+
+#contactButton{
+    border: 0.2em solid #591b98;
+    color: #591b98;
+    border-radius: 0.7em;
+    font-size: 1rem;
+    padding: 0.5em;
+    background-color: rgb(255, 230, 255, 0.7);
+}
+
+#contactButton:hover{
+    color:#ffb3ff;
+    background-color: #8053ac;
+    transition: 0.3s;
+}
+
+#nameSpan{
+    position: absolute;
+    margin-left: 0.5em;
+    font-size: 0.9rem;
+    margin-top: 0.4em;
+}
+
+#emailSpan{
+    position: absolute;
+    margin-left: 0.5em;
+    font-size: 0.9rem;
+    margin-top: 0.4em;
+}
+
+#textAreaSpan{
+    position: absolute;
+    margin-left: 0.5em;
+    font-size: 0.9rem;
+    margin-top: 4.5em;
+}
+
+/* request */
+#manga{
+    border: 0.2em solid #591b98;
+    border-radius: 1em;
+    padding: 0.5em;
+    background-color: rgb(255, 230, 255, 0.7);
+}
+
+#url{
+    border: 0.2em solid #591b98;
+    border-radius: 1em;
+    padding: 0.5em;
+    background-color: rgb(255, 230, 255, 0.7);
+}
+
+#mangaSpan{
+    position: absolute;
+    margin-left: 0.5em;
+    font-size: 0.9rem;
+    margin-top: 0.4em;
+}
+
+#urlSpan{
+    position: absolute;
+    margin-left: 0.5em;
+    font-size: 0.9rem;
+    margin-top: 0.4em;
+}
+
+#requestButton{
+    border: 0.2em solid #591b98;
+    color: #591b98;
+    border-radius: 0.7em;
+    font-size: 1rem;
+    padding: 0.5em;
+    margin-top: 1em;
+    background-color: rgb(255, 230, 255, 0.7);
+}
+
+#requestButton:hover{
+    color:#ffb3ff;
+    background-color: #8053ac;
+    transition: 0.3s;
+}
+
+/* login */
+#username{
+    border: 0.2em solid #591b98;
+    border-radius: 1em;
+    padding: 0.5em;
+    background-color: rgb(255, 230, 255, 0.7);
+}
+
+#password{
+    border: 0.2em solid #591b98;
+    border-radius: 1em;
+    padding: 0.5em;
+    background-color: rgb(255, 230, 255, 0.7);
+}
+
+#usernameSpan{
+    position: absolute;
+    margin-left: 0.5em;
+    font-size: 0.9rem;
+    margin-top: 0.4em;
+}
+
+#passwordSpan{
+    position: absolute;
+    margin-left: 0.5em;
+    font-size: 0.9rem;
+    margin-top: 0.4em;
+}
+
+#loginButton{
+    border: 0.2em solid #591b98;
+    color: #591b98;
+    border-radius: 0.7em;
+    font-size: 1rem;
+    padding: 0.5em;
+    margin-top: 1em;
+    background-color: rgb(255, 230, 255, 0.7);
+}
+
+#loginButton:hover{
+    color:#ffb3ff;
+    background-color: #8053ac;
+    transition: 0.3s;
+}
+
+#regButton{
+    border: 0.2em solid #591b98;
+    color: #591b98;
+    border-radius: 0.7em;
+    font-size: 1rem;
+    padding: 0.5em;
+    margin-top: 1em;
+    background-color: rgb(255, 230, 255, 0.7);
+}
+
+#regButton:hover{
+    color:#ffb3ff;
+    background-color: #8053ac;
+    transition: 0.3s;
+}
+
+/* register */
+#logButton{
+    border: 0.2em solid #591b98;
+    color: #591b98;
+    border-radius: 0.7em;
+    font-size: 1rem;
+    padding: 0.5em;
+    margin-top: 1em;
+    background-color: rgb(255, 230, 255, 0.7);
+}
+
+#logButton:hover{
+    color:#ffb3ff;
+    background-color: #8053ac;
+    transition: 0.3s;
+}
+
+#registerButton{
+    border: 0.2em solid #591b98;
+    color: #591b98;
+    border-radius: 0.7em;
+    font-size: 1rem;
+    padding: 0.5em;
+    margin-top: 1em;
+    background-color: rgb(255, 230, 255, 0.7);
+}
+
+#registerButton:hover{
+    color:#ffb3ff;
+    background-color: #8053ac;
+    transition: 0.3s;
+}
+
+.error{
+    color: red;
+    position: absolute;
+    margin-left: 0.5em;
+    font-size: 0.8rem;
+    margin-top: 0.4em;
+}
+
+/* dictionary */
+.mangaDictionary{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: 2em;
+    background-color: rgb(255, 230, 255, 0.7);
+}
+
+.formDictionary{
+    background-color: rgb(255, 230, 255, 0.7);
+    width: 90%;
+    height: auto;
+    padding: 2em;
+    margin-top: 1em;
+    border-radius: 2em;
+}
+
+.labelDictionaryTitle{
+    font-weight: bold;
+    color:#591b98;
+    font-size: 1.5rem;
+}
+
+.labelDictionary{
+    font-style: italic;
+    color:#591b98;
+    font-size: 1rem;
+}
+
+#dictionaryButton{
+    border: 0.2em solid #591b98;
+    color: #591b98;
+    border-radius: 0.7em;
+    font-size: 1rem;
+    padding: 0.5em;
+    margin-top: 1em;
+    background-color: rgb(255, 230, 255, 0.7);
+}
+
+#dictionaryButton:hover{
+    color:#ffb3ff;
+    background-color: #8053ac;
+    transition: 0.3s;
+}
+
+.radio{
+    margin-left: 1em;
+}
+
+.checkbox{
+    margin-left: 1em;
+}
+
+/* php */
+.bodyPhp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-right: 2em;
+    margin-left: 5.5em;
+    background-color: rgb(255, 230, 255, 0.7);
+    border-radius: 2em;
+}
+
+.titlePhp{
+    padding: 0.2em;
+    margin-bottom: 1em;
+    font-size: 4rem;
+    font-weight: bold;
+    word-wrap: break-word;
+    color: #591b98; 
+}
+
+.textPhp{
+    padding: 0.2em;
+    font-size: 2rem;
+    font-weight: bold;
+    word-wrap: break-word;
+    color: #591b98;
+}
+
+.varPhp{
+    padding: 0.2em;
+    font-size: 1.5rem;
+    word-wrap: break-word;
+    color: #591b98; 
+}
+
+#buttonPhp{
+    border: 0.2em solid #591b98;
+    color: #591b98;
+    border-radius: 0.7em;
+    font-size: 1rem;
+    padding: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background-color: rgb(255, 230, 255, 0.7);
+}
+
+#buttonPhp:hover{
+    color:#ffb3ff;
+    background-color: #8053ac;
+    transition: 0.3s;
+}
+
+/* footer */
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #8053ac;
+}
+
+.footerNav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin-top: 1em;
+    margin-right: 3em;
+}
+
+.footerNav li{
+    float: right;
+}
+  
+.footerNav li a{
+    display: block;
+    text-align: center;
+    padding: 0.5em 0.7em;
+    text-decoration: none;
+    color:#ffb3ff;
+    border: 0.2em solid #ffb3ff;
+}
+  
+.footerNav li a:hover:not(.active){
+    background-color: #ffb3ff;
+    color: #591b98;
+    transition: 0.3s;
+}
+
+.copyright{
+    margin: 1em;
+    color: #ffb3ff;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+/*Responsive*/
+@media only screen and (max-width: 900px){
+    body{
+        width: 100%;
+        margin: auto;
+    }
+
+    .headerTop{
+        flex-direction: column;
+    }
+    
+    .search{
+        margin-left: initial;
+    }
+
+    .searchText{
+        width: 80%;
+        height: auto;
+    }
+
+    .searchButton{
+        width: 10%;
+        height: auto;
+    }
+
+    .headerNav li{
+        float: none;
+    }
+
+    .footerNav{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #8053ac;
+    }
+      
+    .footerNav li{
+        float: none;
+    }
+      
+    .footerNav li a{
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 0.7em 1em;
+        text-decoration: none;
+        border: none;
+    }
+      
+    .FooterNav li a:hover:not(.active){
+        background-color: #ffb3ff;
+        color: #591b98;
+        transition: 0.3s;
+    }
+
+    .copyright{
+        margin: auto;
+    }
+
+    .dropButton{
+        display: none;
+    }
+
+    .headerNav li:nth-child(2){
+        display: initial;
+    }
+
+    #name{
+        width: 60%;
+    }
+
+    #email{
+        width: 60%;
+    }
+    
+    #textArea{
+        width: 80%;
+    }
+
+    #url{
+        width: 60%;
+    }
+
+    #manga{
+        width: 60%;
+    }
+
+    #username{
+        width: 60%;
+    }
+
+    #password{
+        width: 60%;
+    }
+
+    #passwordConfirm{
+        width: 60%;
+    }
+
+    .bodyPhp{
+        margin-left: 1.5em;
+    }
+}
