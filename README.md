@@ -1,2 +1,2 @@
-# Website for Reading Manga
+# Manga Reading Website
  
